@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="vert_console_grids" stretch="3,1">
+      <property name="spacing">
+       <number>50</number>
+      </property>
+      <property name="leftMargin">
+       <number>25</number>
+      </property>
+      <property name="topMargin">
+       <number>25</number>
+      </property>
+      <property name="rightMargin">
+       <number>25</number>
+      </property>
+      <property name="bottomMargin">
+       <number>35</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="hor_grids_layout" stretch="2,1,2">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <item>
+         <layout class="QGridLayout" name="grid_tab_preview" columnstretch="0,0,0,0,0,0">
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>6</number>
+          </property>
+          <item row="1" column="4" colspan="2">
+           <widget class="QPushButton" name="pb_preview">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Podgląd tabeli</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="6">
+           <widget class="QTableWidget" name="tw_preview">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+              <horstretch>111</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QComboBox" name="combo_preview">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QCheckBox" name="chk_active_only">
+            <property name="text">
+             <string>tylko aktywne</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="vl_add_buttons" stretch="2,1,2">
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <item>
+           <layout class="QGridLayout" name="gl_player_add">
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="pb_player_add">
+              <property name="text">
+               <string>tylko aktywne</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="le_player_add">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Nazwa nowego gracza</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gl_paczki">
+            <property name="horizontalSpacing">
+             <number>0</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>5</number>
+            </property>
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="le_pack_name"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QPushButton" name="pb_add_pack">
+              <property name="text">
+               <string>tylko aktywne</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Nazwa nowej paczki</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLineEdit" name="le_pack_points"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Punkty zabierane za paczkę</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gl_assign_packs">
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="1" column="0" colspan="2">
+             <widget class="QPushButton" name="pb_assign_pack">
+              <property name="text">
+               <string>tylko aktywne</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="cb_choose_pack"/>
+            </item>
+            <item row="0" column="0">
+             <widget class="QComboBox" name="cb_choose_player"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="pm_rollback">
+              <property name="text">
+               <string>Odrzuć zmiany</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="pb_commit">
+              <property name="text">
+               <string>Commit zmian</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gl_weekly_points">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pb_add_weekly_points">
+            <property name="text">
+             <string>tylko aktywne</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="tw_weekly_points">
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="rowCount">
+             <number>1</number>
+            </property>
+            <property name="columnCount">
+             <number>4</number>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>15</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <row/>
+            <column>
+             <property name="text">
+              <string>Nazwa gracza</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Wojny</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Datki Gildii</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Dodatkowe punkty</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="log_console"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pb_preview</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>table_preview()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>244</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>table_preview()</slot>
+ </slots>
+</ui>
