@@ -275,7 +275,8 @@ class Ui_MainWindow(object):
           
     def add_row(self,  row,  column):
         tw = self.tw_weekly_points
-        if column == 3:
+        row_count = tw.rowCount()
+        if column ==  3 and row == row_count - 1:
             curr_row_cnt = tw.rowCount()
             tw.setRowCount(curr_row_cnt + 1)
             
@@ -295,11 +296,12 @@ class Ui_MainWindow(object):
         
     def commit(self):
         DB_Manager().commit()
+        GUI_Manager().log_msg('Wykonano commit zmian',  0)
         
         
     def rollback(self):
         DB_Manager().rollback()
-        
+        GUI_Manager().log_msg('Wykonano rollback zmian',  0)
         
 if __name__ == "__main__":
     import sys
